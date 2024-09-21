@@ -17,11 +17,11 @@ class Processor:
         self.page = page
         self.position = pos_icon
         
-        p.moveTo(1231,1058) # click icon
+        p.moveTo(pos_icon[0],pos_icon[1]) # click icon
         p.click()
-        p.moveTo(1489,247)
+        p.moveTo(pos_fullsc[0],pos_fullsc[1]) # click the full screen button
         p.click()
-        p.moveTo(1919,500)
+        p.moveTo(1900,500) # put away from the full screen button
         time.sleep(3)
     
     def capturing(self): # Capture the images
