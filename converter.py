@@ -9,7 +9,7 @@ import time
 import pyautogui as p
 from img2pdf import convert
 print(p.position())
-#%%
+
 class Processor:
     def __init__(self, root, file_name, pos_icon, pos_fullsc, page):
         self.root = root
@@ -27,12 +27,14 @@ class Processor:
     def capturing(self): # Capture the images
         for ii in range(self.page):
             if ii < 10:
-                p.screenshot(self.root+'\\temp\\page_000{}.jpg'.format(ii), region=(0,0,1920,1080))
+                p.screenshot(self.root+'\\temp\\page_0000{}.jpg'.format(ii), region=(0,0,1920,1080))
             elif ii <100:
-                p.screenshot(self.root+'\\temp\\page_00{}.jpg'.format(ii), region=(0,0,1920,1080))
+                p.screenshot(self.root+'\\temp\\page_000{}.jpg'.format(ii), region=(0,0,1920,1080))
             elif ii <1_000:
-                p.screenshot(self.root+'\\temp\\page_0{}.jpg'.format(ii), region=(0,0,1920,1080))
+                p.screenshot(self.root+'\\temp\\page_00{}.jpg'.format(ii), region=(0,0,1920,1080))
             elif ii <10_000:
+                p.screenshot(self.root+'\\temp\\page_0{}.jpg'.format(ii), region=(0,0,1920,1080))
+            elif ii <100_000:
                 p.screenshot(self.root+'\\temp\\page_{}.jpg'.format(ii), region=(0,0,1920,1080))
             
             p.press('right')
