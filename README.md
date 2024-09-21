@@ -14,4 +14,5 @@ Find the position of the full screen button at the ebook reader window.
 # Step 4
 Run the main.py after define the positions, extracted file name, and file pages.
 
+
 **Note that the Ebook files should be used in personal purpose.
